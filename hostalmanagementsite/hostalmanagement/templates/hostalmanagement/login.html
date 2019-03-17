@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hostels</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Center.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navigation-Clean.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navigation-with-Button.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css'%}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row-login">
+            <div class="col-10 col-sm-6 col-md-4 offset-1 offset-sm-3 offset-md-4">
+                <h1 class="text-center">Login</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/auth" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group"><label>Userid</label><input name = "id" class="form-control" type="text"></div>
+                            <div class="form-group"><label>Password </label><input name = "password" class="form-control" type="password"></div>
+                            <p style = "color : red;">{{message}}</p>
+                            <button class="btn btn-success btn-block" type="submit">LOGIN </button></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>

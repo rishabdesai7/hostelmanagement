@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hostels</title>
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/Login-Center.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navigation-Clean.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navigation-with-Button.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/Sidebar-Menu.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/Sidebar-Menu1.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css'%}">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="opacity:0.6;">
+        <div class="container"><a class="navbar-brand" href="#">Cvr College Of Engineering</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto"></ul>
+            </div>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"> <a href="/sdash">Home </a></li>
+                <li> <a href="/apply">Apply</a></li>
+                <li> <a href="/complaints">Complaints</a></li>
+                <li> <a href="/logout">logout</a></li>
+            </ul>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid"><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
+                <div class="row">
+                    <div class="col-md-9 offset-md-2">
+                        <div>
+                            <h1>Dashboard</h1>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="col-md-5"><img src="{% static 'assets/img/dash.jpg'%}"></div>
+                    <div class="col"><dl class="dl-horizontal">
+  <dt>NAME</dt>
+                        <dd><b>{{name}}</b></dd>
+  <dt>ID</dt>
+                        <dd><b>{{id}}</b></dd>
+  <dt>HOSTEL</dt>
+                        <dd><b>{{hostelno}}</b></dd>
+  <dt>ROOM</dt>
+                        <dd><b>{{roomno}}</b></dd>
+    <dt>CONTACT</dt>
+                        <dd><b>{{phone}}</b></dd>
+</dl></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'assets/js/jquery.min.js'%}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'assets/js/Sidebar-Menu.js'%}"></script>
+</body>
+
+</html>
